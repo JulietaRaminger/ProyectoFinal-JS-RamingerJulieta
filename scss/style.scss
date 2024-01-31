@@ -21,7 +21,7 @@ body {
 }
 
 h1 {
-    margin: 10% 0%;
+    margin: 5% 0%;
     text-align: center;
     font-weight: bold;
 }
@@ -204,6 +204,27 @@ h1 {
         }
     }
 }
+
+#inputSearch {
+    border-radius: 5px;
+    background-color: #ffd8da;
+}
+
+#inputSearch::placeholder {
+    color: #6e4555;
+}
+
+#inputSearch:focus {
+    border-color: #6e4555;
+    box-shadow: 5px 5px 15px;
+}
+
+.buscador{
+    margin-bottom: 5%;
+}
+
+
+
 
 /*Cominza sobre nosotros*/
 #nosotros {
@@ -472,7 +493,7 @@ ul {
    border: none;
    background-color: #6e4555;
    color: #ffcfd2;
-
+ 
 }
 
 .boton-submit {

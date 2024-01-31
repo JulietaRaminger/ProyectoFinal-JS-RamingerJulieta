@@ -3,7 +3,7 @@ class Cart {
         this.cart = list;
     }
 
-    addToCart( {id, nombre, img, precio}){
+    addToCart( {id, nombre, precio}){
 const index = this.cart.findIndex(product => product.id == id);
 if (index == -1){
     this.cart.push({id, nombre, precio, cantidad: 1})
@@ -13,6 +13,8 @@ if (index == -1){
 
         localStorage.setItem('cart', JSON.stringify(this.cart));
     }
+
+
 
     //Eliminar productos en el carrito
     removeFromCart(id) {
@@ -24,7 +26,8 @@ if (index == -1){
         localStorage.setItem('cart', JSON.stringify(this.cart));
     }
 
-    
+
+
 
     getProducts(){
         return this.cart;

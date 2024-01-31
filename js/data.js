@@ -13,5 +13,4 @@ const productos = [
     {id: 12, nombre: 'Almohadones de lino', img: './img/productos/Almohadones tela lino.jpeg', precio: 2500, categoria: 'decoracion'},
     {id: 13, nombre: 'Panera', img: './img/productos/Paneras.jpeg', precio: 800, categoria: 'decoracion'},
     {id: 14, nombre: 'Borlas', img: './img/productos/Borlas.jpeg', precio: 800, categoria: 'decoracion'}
-
 ]

@@ -51,10 +51,25 @@
     color: $color-blanco !important;
 }
 
+.btn-primary{
+ background-color: black;
+}
+
   /*Comienza productos*/
   .productos .galeria {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .productos .descripcion {
+    @include tamanio(35%, 100%);
+  }
+
+  .btn {
+    font-size: 14px;
+    width: 60%;
+    height: 30px;
+    margin: 0 20%;
+}
 
   /*sobre nosotros*/
   .taller {
@@ -158,6 +173,15 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .productos .descripcion {
+    @include tamanio(35%, 100%);
+  }
+
+  .btn {
+    width: 60%;
+}
+
+
   /*comienza sobre nosotros*/
   div#carousel.carousel-inner{
     max-height: 700px;
@@ -212,9 +236,16 @@
   }
 
   /*productos*/
-  .productos .galeria {
-    grid-template-columns: repeat(1, 1fr);
+  .productos .descripcion {
+    @include tamanio(40%, 100%);
   }
+
+  .btn {
+    font-size: 14px;
+    width: 60%;
+    height: 30px;
+    margin: 0 20%;
+}
 
   /*comienza sobre nosotros*/
 
