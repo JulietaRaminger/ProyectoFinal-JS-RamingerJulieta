@@ -1,0 +1,29 @@
+@for $i from 1 through 3 {
+    .titulo-#{$i} {
+        font-size: 1rem * $i;
+    }
+}
+
+/*Usando each*/
+
+@each $item in mapa, gmail, whatsapp {
+    .#{$item} {
+        background-image: url("../img/iconos/#{$item}.png");
+        background-repeat: no-repeat;
+        padding: 5px 40px;
+    }
+}
+
+/*Usando map*/
+
+$redes: (
+    instagram: #C13584,
+    facebook: #3b5998,
+    tiktok: #69C9D0,
+);
+
+@each $red, $color in $redes {
+    .#{$red}--color {
+        color:#{$color};
+    }
+}

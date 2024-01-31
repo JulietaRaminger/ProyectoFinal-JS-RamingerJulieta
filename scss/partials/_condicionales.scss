@@ -1,0 +1,411 @@
+$colores: "";
+
+@if ($colores =="verano") {
+    .navegacion {
+        background-color: rgb(245, 225, 109);
+    }
+
+    a {
+        color: rgb(255, 2, 74);
+
+        &:hover {
+            color: rgb(207, 109, 168);
+        }
+    }
+
+    .logo {
+        color: rgb(255, 2, 74);
+    }
+
+    h1 {
+        color: rgb(255, 2, 74);
+    }
+
+    .foto img {
+        border: 3px solid rgb(255, 2, 74);
+
+        &:hover {
+            box-shadow: 5px 5px 20px rgb(207, 109, 168);
+        }
+    }
+
+    .descripcion {
+        color: rgb(255, 2, 74);
+        background-color: rgb(245, 225, 109);
+        box-shadow: 5px 5px 20px rgb(207, 109, 168);
+        border: 3px solid rgb(255, 2, 74);
+    }
+
+    .pregunta {
+        color: rgb(255, 2, 74);
+    }
+
+    .info {
+        background-color: #f8f8f8;
+        box-shadow: 5px 5px 40px rgb(207, 109, 168);
+        color: rgb(255, 2, 74);
+    }
+
+    .formulario {
+        background-color: rgb(245, 225, 109);
+        color: rgb(255, 2, 74);
+    }
+
+    .footer {
+        background-image: linear-gradient(to bottom, #ffffff, #dfe4bd, #ced991, #e6e873, #f7e26d);
+    }
+
+    .derecho-autor {
+        color: black;
+        background-color: rgb(245, 225, 109);
+        border-top: 2px solid rgb(255, 2, 74);
+    }
+
+    /*Botones*/
+    .boton-submit {
+        @extend.boton;
+        background-image: linear-gradient(to bottom, #ffffff, #f653c2, #ec54af, rgb(235, 49, 117), rgb(255, 2, 74));
+        color: white;
+
+        &:hover {
+            box-shadow: 5px 5px 20px #f653c2;
+        }
+    }
+
+    .btn {
+        @extend.boton;
+        background-image: linear-gradient(to bottom, #ffffff, #f653c2, #ec54af, rgb(235, 49, 117), rgb(255, 2, 74));
+        color: white;
+
+        &:hover {
+            color: white;
+            box-shadow: 5px 5px 20px #f653c2;
+        }
+    }
+}
+
+
+@else if ($colores =="primavera") {
+    .navegacion {
+        background-color: rgb(233, 19, 218);
+    }
+
+    a {
+        color: rgb(250, 250, 250);
+    }
+
+    .logo {
+        color: rgb(250, 250, 250);
+    }
+
+    h1 {
+        color: rgb(233, 19, 218);
+    }
+
+    .foto img {
+        border: 3px solid rgb(234, 125, 227);
+
+        &:hover {
+            box-shadow: 5px 5px 20px rgb(234, 125, 227);
+        }
+    }
+
+    .descripcion {
+        color: rgb(233, 19, 218);
+        background-color: white;
+        box-shadow: 5px 5px 20px rgb(234, 125, 227);
+        border: 3px solid rgb(234, 125, 227);
+    }
+
+    .pregunta {
+        color: rgb(233, 19, 218);
+    }
+
+    .info {
+        background-color: #f8f8f8;
+        box-shadow: 5px 5px 40px rgb(234, 125, 227);
+        color: rgb(233, 19, 218);
+    }
+
+    .formulario {
+        background-color: rgb(233, 19, 218);
+        color: white;
+    }
+
+    .footer {
+        background-image: linear-gradient(to bottom, #ffffff, #e3bde4, #d991d4, #e473e8, #e816e1);
+    }
+
+    .derecho-autor {
+        color: black;
+        background-color: rgb(233, 19, 218);
+        border-top: 2px solid white;
+    }
+
+    /*Botones*/
+    .boton-submit {
+        @extend.boton;
+        background-image: linear-gradient(to bottom, #ffffff, #e9a5d4, #e079d0, #da6ee0, rgb(235, 82, 222));
+        color: white;
+
+        &:hover {
+            box-shadow: 5px 5px 20px white;
+        }
+    }
+
+    .btn {
+        @extend.boton;
+        background-image: linear-gradient(to bottom, #ffffff, #e9a5d4, #e079d0, #da6ee0, rgb(235, 82, 222));
+        color: white;
+
+        &:hover {
+            color: white;
+            box-shadow: 5px 5px 20px white;
+        }
+    }
+}
+
+@else if ($colores =="otonio") {
+    .navegacion {
+        background-color: rgb(233, 133, 19);
+    }
+
+    a {
+        color: rgb(250, 250, 250);
+    }
+
+    .logo {
+        color: rgb(250, 250, 250);
+    }
+
+    h1 {
+        color: rgb(233, 133, 19);
+    }
+
+    .foto img {
+        border: 3px solid rgb(133, 80, 7);
+
+        &:hover {
+            box-shadow: 5px 5px 20px rgb(133, 80, 7);
+        }
+    }
+
+    .descripcion {
+        color: rgb(233, 133, 19);
+        background-color: white;
+        box-shadow: 5px 5px 20px rgb(133, 80, 7);
+        border: 3px solid rgb(133, 80, 7);
+    }
+
+    .pregunta {
+        color: rgb(233, 133, 19);
+    }
+
+    .info {
+        background-color: #f8f8f8;
+        box-shadow: 5px 5px 40px rgb(133, 80, 7);
+        color: rgb(233, 133, 19);
+    }
+
+    .formulario {
+        background-color: rgb(233, 133, 19);
+        color: white;
+    }
+
+    .footer {
+        background-image: linear-gradient(to bottom, #ffffff, #e9d6a5, #e0b579, #f3a256, rgb(247, 162, 59));
+    }
+
+    .derecho-autor {
+        color: black;
+        background-color: rgb(233, 133, 19);
+        border-top: 2px solid white;
+    }
+
+    /*Botones*/
+    .boton-submit {
+        @extend.boton;
+        background-image: linear-gradient(to bottom, #ffffff, #e9d6a5, #e0b579, #f99231, rgb(255, 136, 0));
+        color: rgb(133, 80, 7);
+
+        &:hover {
+            box-shadow: 5px 5px 20px white;
+        }
+    }
+
+    .btn {
+        @extend.boton;
+        background-image: linear-gradient(to bottom, #ffffff, #e9d6a5, #e0b579, #f99231, rgb(255, 136, 0));
+        color: rgb(133, 80, 7);
+
+        &:hover {
+            color: rgb(133, 80, 7);
+            box-shadow: 5px 5px 20px white;
+        }
+    }
+}
+
+
+@else if ($colores =="invierno") {
+    .navegacion {
+        background-color: rgb(121, 87, 148);
+    }
+
+    a {
+        color: rgb(250, 250, 250);
+    }
+
+    .logo {
+        color: rgb(250, 250, 250);
+    }
+
+    h1 {
+        color: rgb(121, 87, 148);
+    }
+
+    .foto img {
+        border: 3px solid rgb(169, 74, 247);
+
+        &:hover {
+            box-shadow: 5px 5px 20px rgb(121, 87, 148);
+        }
+    }
+
+    .descripcion {
+        color: rgb(121, 87, 148);
+        background-color: white;
+        box-shadow: 5px 5px 20px rgb(121, 87, 148);
+        border: 3px solid rgb(169, 74, 247);
+    }
+
+    .pregunta {
+        color: rgb(121, 87, 148);
+    }
+
+    .info {
+        background-color: #f8f8f8;
+        box-shadow: 5px 5px 40px rgb(121, 87, 148);
+        color: rgb(121, 87, 148);
+    }
+
+    .formulario {
+        background-color: rgb(121, 87, 148);
+        color: white;
+    }
+
+    .footer {
+        background-image: linear-gradient(to bottom, #ffffff, #c7a5e9, #ae7dbd, #b073c3, rgb(135, 103, 147));
+    }
+
+    .derecho-autor {
+        color: black;
+        background-color: rgb(121, 87, 148);
+        border-top: 2px solid white;
+    }
+
+    /*Botones*/
+    .boton-submit {
+        @extend.boton;
+        background-image: linear-gradient(to bottom, #ffffff, #dba5e9, #c499d1, #d499e7, rgb(199, 141, 220));
+        color: rgb(77, 3, 96);
+
+        &:hover {
+            box-shadow: 5px 5px 20px white;
+        }
+    }
+
+    .btn {
+        @extend.boton;
+        background-image: linear-gradient(to bottom, #ffffff, #dba5e9, #c499d1, #d499e7, rgb(199, 141, 220));
+        color: rgb(77, 3, 96);
+
+        &:hover {
+            color: rgb(77, 3, 96);
+            box-shadow: 5px 5px 20px white;
+        }
+    }
+}
+
+@else {
+    .navegacion {
+        background-color: $color-violeta;
+    }
+
+    a {
+        color: $color-rosa;
+        &:hover {
+            color: rgb(250, 250, 250);
+        }
+    }
+
+    .logo {
+        color: rgb(250, 250, 250);
+    }
+
+    h1 {
+        color: $color-violeta;
+    }
+
+    .foto img {
+        border: 3px solid $color-rosa;
+
+        &:hover {
+            box-shadow: 5px 5px 20px $color-violeta;
+        }
+    }
+
+    .descripcion {
+        color: $color-blanco;
+        background-color: $color-violeta;
+        box-shadow: 5px 5px 20px $color-violeta;
+        border: 3px solid $color-rosa;
+    }
+
+    .pregunta {
+        color: $color-violeta;
+    }
+
+    .info {
+        background-color: #f8f8f8;
+        box-shadow: 5px 5px 40px #6e4555;
+        color: #6e4555;
+    }
+
+    .formulario {
+        background-color: $color-rosa;
+        color: $color-violeta;
+    }
+
+    .footer {
+        background-image: linear-gradient(to bottom, #ffffff, #cfcad2, #ab9cab, #8c6f81, #6e4555);
+    }
+
+    .derecho-autor {
+        color: $color-blanco;
+        background-color: $color-violeta;
+        border-top: 2px solid #ffcfd2;
+    }
+
+    /*Botones*/
+    .boton-submit {
+        @extend.boton;
+        background-image: linear-gradient(to bottom, #f8f8f8, #f5f1f7, #f5eaf4, #f7e1ee, #fbd9e4, #f0c9d3, #e4b9c2, #d9aab1, #bd8f99, #a27681, #885d6b, #6e4555);
+        color: $color-violeta;
+
+        &:hover {
+            color: $color-violeta;
+            box-shadow: 5px 5px 20px $color-violeta;
+        }
+    }
+
+    .btn {
+        @extend.boton;
+        background-image: linear-gradient(to bottom, #f8f8f8, #f4eff7, #f6e4f0, #fbd9e4, #ffcfd2);
+        color: $color-violeta;
+
+        &:hover {
+            color: $color-violeta;
+            box-shadow: 5px 5px 20px $color-blanco;
+        }
+    }
+}

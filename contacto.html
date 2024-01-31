@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Keywords-->
+  <meta name="keywords"
+    content="diseño de interiores, moda infantil, decoración para el hogar, productos de diseño, diseño creativo, estilo único, artículos decorativos, confección de alta calidad">
+  <!--Descripcion-->
+  <meta name="descripcion" content="Descubre la esencia única de Dena Diseño: moda infantil y decoración para el hogar. Calidad, creatividad y originalidad en cada detalle.
+  ¡Bienvenido a Dena Diseño, donde la magia se encuentra en cada producto!">
+  <!--link de iconos-->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!--bootstrap-->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <!--Favicon-->
+  <link rel="shortcut icon" type="image/x-icon" href="./img/iconos/favicon.ico">
+  <!--Animate css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!--link de css-->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!--JavaScript-->
+  <script src="./js/data.js" defer></script>
+  <script src="./js/carrito.js" defer></script>
+  <script src="./js/script.js" defer></script>
+  <title>Inicio - Dena Diseño</title>
+</head>
+
+<body>
+  <!--Empieza barra menu-->
+  <nav class="container-fluid navegacion">
+    <div class="animate__animated animate__backInDown logo">DENA DISEÑO</div>
+    <!--menu mobile-->
+    <input type="checkbox" id="check-menu">
+    <ul class="nav">
+      <li class="menu">
+        <a href="./index.html">Inicio</a>
+      </li>
+      <li class="menu">
+        <a href="./productos.html">Productos</a>
+      </li>
+      <li class="menu">
+        <a href="./nosotros.html">Sobre nosotros</a>
+      </li>
+      <li class="menu">
+        <a href="./preguntas.html">Preguntas frecuentes</a>
+      </li>
+      <li class="menu">
+        <a href="./contacto.html">Contactanos</a>
+      </li>
+      <li class="menu">
+        <button id="btnCarrito" type="button" class="btn-primary">
+          <i class="bx bx-cart"></i>
+          <span id="cartCount" class="badge text-bg-secondary">0</span>
+      </button>
+      </li>
+    </ul>
+    <label for="check-menu">
+      <i class='bx bx-menu'></i>
+    </label>
+  </nav>
+
+  <!--Empieza contacto-->
+  <section id="contacto" class="container">
+    <h1 class="titulo-2">Contactanos</h1>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-12 info">
+        <ul>
+          <li class="item mapa">Artigas 323, Salto</li>
+          <li class="item gmail">dena.diseño.deco@gmail.com</li>
+          <li class="item whatsapp">+598-99568681</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-12 map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.951425181728!2d-57.97477292453218!3d-31.38790287427492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95adc2d2b2d5442b%3A0xda6da3d624f6db43!2sArtigas%20323%2C%2050000%20Salto%2C%20Departamento%20de%20Salto!5e0!3m2!1ses-419!2suy!4v1696883717269!5m2!1ses-419!2suy"
+          width="400" height="500" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <form action="" class="col-lg-6 col-md-6 col-sm-12 col-12">
+        <div class="formulario">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required />
+        </div>
+        <div class="formulario">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Ingrese su email" required />
+        </div>
+        <div class="formulario">
+          <label for="mensaje">Ingresa tu mensaje</label>
+          <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escriba aqui" required></textarea>
+        </div>
+        <div class="formulario">
+          <button class="boton-submit" type="submit" value="Enviar" required>Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!--Empieza footer-->
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <section class="col-lg-6 col-md-6 col-sm-12 col-12 siguenos">
+          <h5>SIGUENOS</h5>
+          <ul>
+            <li class="link_item">
+              <a href="https://instagram.com/dena.diseno.uy?igshid=YTQwZjQ0NmI0OA==" target="_blank"><i
+                  class="bx bxl-instagram instagram--color"></i>Instagram</a>
+            </li>
+            <li class="link_item">
+              <a href="https://www.facebook.com/dena.disenodeco?mibextid=ZbWKwL" target="_blank"><i
+                  class="bx bxl-facebook facebook--color"></i>Facebook</a>
+            </li>
+            <li class="link_item">
+              <a href="https://www.tiktok.com/@dena.dis?_t=8h42nXON04c&_r=1" target="_blank"><i
+                  class="bx bxl-tiktok tiktok--color"></i>Tik-tok</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="col-lg-6 col-md-6 col-sm-12 col-12 suscribete">
+          <h5>SUSCRIBETE</h5>
+          <p class="registrarse">
+            ¡Suscribite y recibí todas nuestras novedades!
+          </p>
+
+          <form action="" class="col-lg-12 col-md-12 col-sm-12 col-12 form-sub">
+            <input type="email" name="email" placeholder="ejemplo@gmai.com" required />
+            <button class="btn">Enviar</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </footer>
+
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-12 derecho-autor">
+        <p class="autor">©, copyright @ 2023 JulietaRaminger</p>
+      </div>
+    </div>
+  </section>
+
+  <!--bootstrap js-->
+  <script src="./js/bootstrap.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
