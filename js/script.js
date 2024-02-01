@@ -35,7 +35,6 @@ btnBuy.addEventListener("click", () => {
   });
 });
 
-
 btnClose.addEventListener("click", () => {
   modal.hide(); // Cierro carrito
 });
@@ -110,31 +109,72 @@ const renderCart = (list) => {
   modalListProducts.innerHTML = "";
   list.forEach((productos) => {
     modalListProducts.innerHTML += //html
-      `<tr>
-        <td>${productos.nombre}</td>
-        <td>${productos.cantidad}</td>
-        <td>${productos.precio}</td>
-        <td>${productos.precio * productos.cantidad}</td>
-        <td>
-          <button class="boton btn-danger btnRemoveFromCart" data-id="${productos.id}">
-            <i class="bx bx-x"></i>
-          </button>
-        </td>
-      </tr>`;
+    `<tr>
+    <td>${productos.nombre}</td>
+    <td>
+      <button class="boton btnDecrement" data-id="${productos.id}">
+        <i class="bx bx-minus"></i>
+      </button>
+      ${productos.cantidad}
+      <button class="boton btnIncrement" data-id="${productos.id}">
+        <i class="bx bx-plus"></i>
+      </button>
+    </td>
+    <td>${productos.precio}</td>
+    <td>${productos.precio * productos.cantidad}</td>
+    <td>
+      <button class="boton btn-danger btnRemoveFromCart" data-id="${productos.id}">
+        <i class="bx bx-x"></i>
+      </button>
+    </td>
+  </tr>`;
   });
 
+  setupCartEvents();
+};
+
+const setupCartEvents = () => {
   const btnsRemoveFromCart = document.querySelectorAll(".btnRemoveFromCart");
   btnsRemoveFromCart.forEach((boton) => {
     boton.addEventListener("click", removeFromCart);
+  });
+
+  const btnsIncrement = document.querySelectorAll(".btnIncrement");
+  const btnsDecrement = document.querySelectorAll(".btnDecrement");
+
+  btnsIncrement.forEach((btn) => {
+    btn.addEventListener("click", incrementQuantity);
+  });
+
+  btnsDecrement.forEach((btn) => {
+    btn.addEventListener("click", decrementQuantity);
   });
 };
 
 const removeFromCart = (e) => {
   const id = e.target.dataset.id;
   cart.removeFromCart(id);
+  updateCart();
+};
+
+const incrementQuantity = (e) => {
+  const id = e.target.dataset.id;
+  cart.incrementQuantity(id);
+  updateCart();
+};
+
+const decrementQuantity = (e) => {
+  const id = e.target.dataset.id;
+  cart.decrementQuantity(id);
+  updateCart();
+};
+
+const updateCart = () => {
   renderCart(cart.getProducts());
   cartCount.innerText = cart.getCount();
   cartSum.innerText = cart.getSum();
 };
 
+// Luego, donde inicializas el programa
+setupCartEvents();
 renderProducts(productos);
