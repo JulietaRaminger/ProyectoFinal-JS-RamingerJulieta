@@ -107,65 +107,59 @@ const addToCart = (e) => {
 
 const renderCart = (list) => {
   modalListProducts.innerHTML = "";
-  list.forEach((productos) => {
-    modalListProducts.innerHTML += //html
-    `<tr>
-    <td>${productos.nombre}</td>
-    <td>
-      <button class="boton btnDecrement" data-id="${productos.id}">
-        <i class="bx bx-minus"></i>
-      </button>
-      ${productos.cantidad}
-      <button class="boton btnIncrement" data-id="${productos.id}">
-        <i class="bx bx-plus"></i>
-      </button>
-    </td>
-    <td>${productos.precio}</td>
-    <td>${productos.precio * productos.cantidad}</td>
-    <td>
-      <button class="boton btn-danger btnRemoveFromCart" data-id="${productos.id}">
-        <i class="bx bx-x"></i>
-      </button>
-    </td>
-  </tr>`;
+  list.forEach((producto) => {
+    const row = document.createElement("tr");
+    row.innerHTML = //html
+    `<td>${producto.nombre}</td>
+      <td>
+        <button class="boton btnDecrement" data-id="${producto.id}">
+          <i class="bx bx-minus"></i>
+        </button>
+        ${producto.cantidad}
+        <button class="boton btnIncrement" data-id="${producto.id}">
+          <i class="bx bx-plus"></i>
+        </button>
+      </td>
+      <td>${producto.precio}</td>
+      <td>${producto.precio * producto.cantidad}</td>
+      <td>
+        <button class="boton btn-danger btnRemoveFromCart" data-id="${producto.id}">
+          <i class="bx bx-x"></i>
+        </button>
+      </td>`;
+    modalListProducts.appendChild(row);
   });
 
   setupCartEvents();
 };
 
 const setupCartEvents = () => {
-  const btnsRemoveFromCart = document.querySelectorAll(".btnRemoveFromCart");
-  btnsRemoveFromCart.forEach((boton) => {
+  document.querySelectorAll(".btnRemoveFromCart").forEach((boton) => {
     boton.addEventListener("click", removeFromCart);
   });
 
-  const btnsIncrement = document.querySelectorAll(".btnIncrement");
-  const btnsDecrement = document.querySelectorAll(".btnDecrement");
-
-  btnsIncrement.forEach((btn) => {
-    btn.addEventListener("click", incrementQuantity);
+  document.querySelectorAll(".btnIncrement").forEach((btn) => {
+    btn.addEventListener("click", () => incrementOrDecrement(btn, "increment"));
   });
 
-  btnsDecrement.forEach((btn) => {
-    btn.addEventListener("click", decrementQuantity);
+  document.querySelectorAll(".btnDecrement").forEach((btn) => {
+    btn.addEventListener("click", () => incrementOrDecrement(btn, "decrement"));
   });
 };
 
 const removeFromCart = (e) => {
-  const id = e.target.dataset.id;
+  const id = e.target.getAttribute("data-id");
   cart.removeFromCart(id);
   updateCart();
 };
 
-const incrementQuantity = (e) => {
-  const id = e.target.dataset.id;
-  cart.incrementQuantity(id);
-  updateCart();
-};
-
-const decrementQuantity = (e) => {
-  const id = e.target.dataset.id;
-  cart.decrementQuantity(id);
+const incrementOrDecrement = (btn, action) => {
+  const id = btn.getAttribute("data-id");
+  if (action === "increment") {
+    cart.incrementQuantity(id);
+  } else if (action === "decrement") {
+    cart.decrementQuantity(id);
+  }
   updateCart();
 };
 
