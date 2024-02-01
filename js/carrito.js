@@ -29,7 +29,6 @@ class Cart {
     localStorage.setItem("cart", JSON.stringify(this.cart));
   }
 
-  //Eliminar productos en el carrito
   removeFromCart(id) {
     const index = this.cart.findIndex((product) => product.id == id);
     if (index !== -1) {
@@ -44,11 +43,13 @@ class Cart {
   }
 
   getCount() {
-    return this.cart.reduce((cantidad, item) => 
-     cantidad + item.cantidad, 0);
+    return this.cart.reduce((cantidad, item) => cantidad + item.cantidad, 0);
   }
 
   getSum() {
-    return this.cart.reduce((acumulador, item) =>  acumulador + item.cantidad * item.precio, 0);
+    return this.cart.reduce(
+      (acumulador, item) => acumulador + item.cantidad * item.precio,
+      0
+    );
   }
 }

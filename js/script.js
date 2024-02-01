@@ -175,6 +175,5 @@ const updateCart = () => {
   cartSum.innerText = cart.getSum();
 };
 
-// Luego, donde inicializas el programa
 setupCartEvents();
 renderProducts(productos);
