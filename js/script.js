@@ -112,18 +112,18 @@ const renderCart = (list) => {
     row.innerHTML = //html
     `<td>${producto.nombre}</td>
       <td>
-        <button class="boton btnDecrement" data-id="${producto.id}">
+        <button class="boton btnDecrement" id="${producto.id}">
           <i class="bx bx-minus"></i>
         </button>
         ${producto.cantidad}
-        <button class="boton btnIncrement" data-id="${producto.id}">
+        <button class="boton btnIncrement" id="${producto.id}">
           <i class="bx bx-plus"></i>
         </button>
       </td>
       <td>${producto.precio}</td>
       <td>${producto.precio * producto.cantidad}</td>
       <td>
-        <button class="boton btn-danger btnRemoveFromCart" data-id="${producto.id}">
+        <button class="boton btn-danger btnRemoveFromCart" id="${producto.id}">
           <i class="bx bx-x"></i>
         </button>
       </td>`;
@@ -148,13 +148,13 @@ const setupCartEvents = () => {
 };
 
 const removeFromCart = (e) => {
-  const id = e.target.getAttribute("data-id");
+  const id = e.target.getAttribute("id");
   cart.removeFromCart(id);
   updateCart();
 };
 
 const incrementOrDecrement = (btn, action) => {
-  const id = btn.getAttribute("data-id");
+  const id = btn.getAttribute("id");
   if (action === "increment") {
     cart.incrementQuantity(id);
   } else if (action === "decrement") {

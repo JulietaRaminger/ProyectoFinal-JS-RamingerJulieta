@@ -274,7 +274,7 @@ h1 {
   transform: scale(1.03);
 }
 .productos .descripcion {
-  height: 30%;
+  height: 32%;
   width: 100%;
   padding: 10px;
 }
@@ -544,9 +544,9 @@ ul .link_item a i.bx {
 }
 
 .btn {
-  width: 40%;
-  height: 40px;
-  margin: 0 30%;
+  width: 50%;
+  height: 35px;
+  margin: 0 25%;
 }
 .btn:hover {
   transform: scale(1.03);

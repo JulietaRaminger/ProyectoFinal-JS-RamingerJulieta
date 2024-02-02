@@ -190,7 +190,7 @@ h1 {
     }
 
     .descripcion {
-        @include tamanio(30%, 100%);
+        @include tamanio(32%, 100%);
         padding: 10px;
 
         h2 {
@@ -508,9 +508,9 @@ ul {
 
 .btn {
     @extend.boton;
-    width: 40%;
-    height: 40px;
-    margin: 0 30%;
+    width: 50%;
+    height: 35px;
+    margin: 0 25%;
 
     &:hover {
         transform: scale(1.03);
