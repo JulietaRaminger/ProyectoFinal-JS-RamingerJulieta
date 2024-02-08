@@ -1,3 +1,4 @@
+
 const productos = [
     {id: 1, nombre: 'Almohadones de cuna', img: './img/productos/almohadones para cunas1.jpeg', precio: 1000, categoria: 'decoracion'},
     {id: 2, nombre: 'Angelitos', img: './img/productos/angelitos1.jpeg', precio: 500, categoria: 'decoracion'},

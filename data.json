@@ -1,0 +1,109 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Almohadones de cuna",
+            "img": "./img/productos/almohadones para cunas1.jpeg",
+            "precio": 1000,
+            "id_categoria": [1, 3]
+        },
+        {
+            "id": 2,
+            "nombre": "Angelitos",
+            "img": "./img/productos/angelitos1.jpeg",
+            "precio": 500,
+            "id_categoria": [1, 2]
+        },
+        {
+            "id": 3,
+            "nombre": "Beberos Bandana",
+            "img": "./img/productos/babero bandana1.jpeg",
+            "precio": 1500,
+            "id_categoria": [1, 3]
+        },
+        {
+            "id": 4,
+            "nombre": "Babitas de toalla",
+            "img": "./img/productos/babita1.jpeg",
+            "precio": 2000,
+            "id_categoria": [1, 3]
+        },
+        {
+            "id": 5,
+            "nombre": "Conjunto de lino",
+            "img": "./img/productos/conjunto lino1.jpeg",
+            "precio": 3000,
+            "id_categoria": [1, 3]
+        },
+        {
+            "id": 6,
+            "nombre": "Coronas",
+            "img": "./img/productos/corona1.jpeg",
+            "precio": 1500,
+            "id_categoria": [1, 3]
+        },
+        {
+            "id": 7,
+            "nombre": "Toallas",
+            "img": "./img/productos/toalla1.jpeg",
+            "precio": 2500,
+            "id_categoria": [1, 3]
+        },
+        {
+            "id": 8,
+            "nombre": "Toallas bordadas",
+            "img": "./img/productos/toallas bordadas.jpeg",
+            "precio": 3000,
+            "id_categoria": [1, 3]
+        },
+        {
+            "id": 9,
+            "nombre": "Tutu",
+            "img": "./img/productos/tutu1.jpeg",
+            "precio": 1000,
+            "id_categoria": [1, 3]
+        },
+        {
+            "id": 10,
+            "nombre": "Almohadones de algodon",
+            "img": "./img/productos/Almohadones tela algodon.jpeg",
+            "precio": 1500,
+            "id_categoria": [1, 2]
+        },
+        {
+            "id": 11,
+            "nombre": "Almohadones tela italiana",
+            "img": "./img/productos/Almohadones tela italiana.jpeg",
+            "precio": 2000,
+            "id_categoria": [1, 2]
+        },
+        {
+            "id": 12,
+            "nombre": "Almohadones de lino",
+            "img": "./img/productos/Almohadones tela lino.jpeg",
+            "precio": 2500,
+            "id_categoria": [1, 2]
+        },
+        {
+            "id": 13,
+            "nombre": "Panera",
+            "img": "./img/productos/Paneras.jpeg",
+            "precio": 800,
+            "id_categoria": [1, 2]
+        },
+        {
+            "id": 14,
+            "nombre": "Borlas",
+            "img": "./img/productos/Borlas.jpeg",
+            "precio": 800,
+            "id_categoria": [1, 2]
+         
+        }
+    ],
+    "categoria": [
+        {"id_categoria": 1, "name": "Todos"},
+        {"id_categoria": 2, "name": "Decoración"},
+        {"id_categoria": 3, "name": "Niños"}
+        
+    ]
+}

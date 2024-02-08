@@ -287,9 +287,10 @@ h1 {
   text-align: center;
 }
 
-#inputSearch {
+.form-control {
   border-radius: 5px;
   background-color: #ffd8da;
+  margin-bottom: 20%;
 }
 
 #inputSearch::placeholder {
@@ -301,8 +302,15 @@ h1 {
   box-shadow: 5px 5px 15px;
 }
 
-.buscador {
-  margin-bottom: 5%;
+.categorias {
+  position: relative;
+}
+
+.icono {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #6e4555;
 }
 
 /*Cominza sobre nosotros*/

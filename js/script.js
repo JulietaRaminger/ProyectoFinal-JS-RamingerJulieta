@@ -12,6 +12,8 @@ const selectCategory = document.querySelector("#selectCategory");
 const listCart = JSON.parse(localStorage.getItem("cart")) || [];
 const cart = new Cart(listCart);
 
+let lista_productos = [];
+
 cartCount.innerText = cart.getCount();
 
 btnCarrito.addEventListener("click", function () {
@@ -23,12 +25,11 @@ btnCarrito.addEventListener("click", function () {
 });
 
 btnBuy.addEventListener("click", () => {
-    Swal.fire({
-        title: "Compra realizada",
-        text: "Muchas gracias 😊",
-        icon: "success",
-        confirmButtonText: "Aceptar",
-    
+  Swal.fire({
+    title: "Compra realizada",
+    text: "Muchas gracias 😊",
+    icon: "success",
+    confirmButtonText: "Aceptar",
   }).then(() => {
     localStorage.removeItem("cart"); // Limpio carrito
     location.reload(); // Recargo pagina
@@ -39,26 +40,36 @@ btnClose.addEventListener("click", () => {
   modal.hide(); // Cierro carrito
 });
 
-selectCategory.addEventListener("input", (e) => {
-  const category = e.target.value;
-  let list;
-
-  if (category === "productos") {
-    list = productos;
-  } else {
-    list = productos.filter((product) => product.categoria == category);
-  }
-
-  renderProducts(list);
-});
 
 inputSearch.addEventListener("input", (event) => {
   const search = event.target.value;
-  const newList = productos.filter((product) =>
-    product.nombre.toLowerCase().includes(search.toLowerCase())
-  );
+  const newList = lista_productos.filter((product) =>
+    product.nombre.toLowerCase().includes(search.toLowerCase()));
   renderProducts(newList);
 });
+
+
+selectCategory.addEventListener("change", (e) => {
+  const category = selectCategory.value;
+  filtroCategoria(category);
+});
+
+
+const renderCategory = (list) => {
+  selectCategory.innerHTML = "";
+  list.forEach((categoria) => {
+    selectCategory.innerHTML += //html
+      `<option value= ${categoria.id_categoria}> ${categoria.name}</option>`;
+  });
+};
+
+const filtroCategoria = (id_categoria) => {
+  const nuevaLista = lista_productos.filter(
+    (product) => product.id_categoria.includes(parseInt(id_categoria))
+  );
+  renderProducts(nuevaLista);
+};
+
 
 //Cargo mis productos
 const renderProducts = (list) => {
@@ -80,7 +91,6 @@ const renderProducts = (list) => {
   });
 
   const btns = document.querySelectorAll(".btnAddCart");
-
   btns.forEach((btn) => {
     btn.addEventListener("click", addToCart);
   });
@@ -88,29 +98,29 @@ const renderProducts = (list) => {
 
 const addToCart = (e) => {
   const id = e.target.id;
-  const product = productos.find((item) => item.id == id);
-  console.table(product);
+
+  const product = lista_productos.find((item) => item.id == id);
+
   cart.addToCart(product);
   cartCount.innerText = cart.getCount();
 
   Toastify({
-
-    text: "Se agrego un producto al carrito", 
+    text: "Se agrego un producto al carrito",
     duration: 1000,
     close: true,
     style: {
-        background: "linear-gradient(to right, #9638ad, #ca7abd)",
-      },
-    
-    }).showToast();
-}
+      background: "linear-gradient(to right, #9638ad, #ca7abd)",
+    },
+  }).showToast();
+};
 
 const renderCart = (list) => {
   modalListProducts.innerHTML = "";
   list.forEach((producto) => {
     const row = document.createElement("tr");
-    row.innerHTML = //html
-    `<td>${producto.nombre}</td>
+    row.innerHTML =
+      //html
+      `<td>${producto.nombre}</td>
       <td>
         <button class="boton btnDecrement" id="${producto.id}">
           <i class="bx bx-minus"></i>
@@ -170,4 +180,26 @@ const updateCart = () => {
 };
 
 setupCartEvents();
-renderProducts(productos);
+
+const getProducts = async () => {
+  try {
+    const endPoint = "./data.json";
+    const resp = await fetch(endPoint);
+    const json = await resp.json();
+
+    const { productos, categoria } = json;
+    lista_productos = productos;
+    renderProducts(productos);
+    renderCategory(categoria);
+  } catch (error) {
+    Swal.fire({
+      title: "Error",
+      text: "Ocurrio un error 🫤. Por favor intente más tarde 🙏",
+      icon: "error",
+      confirmButtonText: "Aceptar",
+    });
+    console.log(error);
+  }
+};
+
+getProducts();
