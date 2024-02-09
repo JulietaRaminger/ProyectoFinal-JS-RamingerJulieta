@@ -70,15 +70,14 @@ const filtroCategoria = (id_categoria) => {
   renderProducts(nuevaLista);
 };
 
-
 //Cargo mis productos
 const renderProducts = (list) => {
   listProducts.innerHTML = "";
   list.forEach((product) => {
     listProducts.innerHTML += //html
       ` <div class="col-lg-3 col-md-4 col-sm-6 col-6 galeria">
-    <div class="foto">
-    <img src="${product.img}" alt="${product.nombre}">
+    <div class="foto ampliada">
+    <img src="${product.img}" alt="${product.nombre}" onclick='openFulImg(this.src)'>
       <div class="descripcion">
         <h2>${product.nombre}</h2>
         <h3>${product.precio}</h3>
@@ -89,6 +88,8 @@ const renderProducts = (list) => {
       </div>
       </div>`;
   });
+
+  
 
   const btns = document.querySelectorAll(".btnAddCart");
   btns.forEach((btn) => {
@@ -203,3 +204,5 @@ const getProducts = async () => {
 };
 
 getProducts();
+
+

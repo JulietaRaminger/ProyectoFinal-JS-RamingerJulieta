@@ -1,6 +1,10 @@
 class Cart {
-  constructor(list = []) {
-    this.cart = list;
+  constructor() {
+    this.cart = JSON.parse(localStorage.getItem("cart")) || [];
+  }
+
+  saveCart() {
+    localStorage.setItem("cart", JSON.stringify(this.cart));
   }
 
   addToCart({ id, nombre, precio }) {
@@ -10,7 +14,7 @@ class Cart {
     } else {
       this.cart[index].cantidad += 1;
     }
-    localStorage.setItem("cart", JSON.stringify(this.cart));
+    this.saveCart();
   }
 
   incrementQuantity(id) {
@@ -18,7 +22,7 @@ class Cart {
     if (index !== -1) {
       this.cart[index].cantidad += 1;
     }
-    localStorage.setItem("cart", JSON.stringify(this.cart));
+    this.saveCart();
   }
 
   decrementQuantity(id) {
@@ -26,7 +30,7 @@ class Cart {
     if (index !== -1 && this.cart[index].cantidad > 1) {
       this.cart[index].cantidad -= 1;
     }
-    localStorage.setItem("cart", JSON.stringify(this.cart));
+    this.saveCart();
   }
 
   removeFromCart(id) {
@@ -34,8 +38,7 @@ class Cart {
     if (index !== -1) {
       this.cart.splice(index, 1);
     }
-
-    localStorage.setItem("cart", JSON.stringify(this.cart));
+    this.saveCart();
   }
 
   getProducts() {

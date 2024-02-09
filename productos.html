@@ -25,6 +25,7 @@
  
   <script src="./js/carrito.js" defer></script>
   <script src="./js/script.js" defer></script>
+  <script src="./js/imagenes.js" defer></script>
   <!--Librerias de JS-->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
@@ -76,11 +77,11 @@
     <div class="row">
       <h5>Busca tus producto:</h5>
 
-        <div class="col-lg-3 col-md-6 col-sm-8 col-12">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <input id="inputSearch" type="search" class="form-control" placeholder="Buscar...">
         </div>
 
-        <div class="col-lg-3 col-md-6 col-sm-8 col-12">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
           <div class="categorias">
           <select id="selectCategory" class="form-control">
 
@@ -88,6 +89,13 @@
           <i class='icono bx bxs-chevron-down-square'></i>
       </div>
     </div>
+
+   <!--Clic a mis imagenes para que se agranden-->
+   <div class="ful-img" id="fulImgBox">
+    <img id="fulImg" alt="">
+    <span id="closeImg"><i class='bx bx-x'></i></span>
+  </div>
+
 
     <div class="container productos">
     <div id="listProducts" class="row">
