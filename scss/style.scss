@@ -72,6 +72,7 @@ h1 {
             color: $color-rosa;
             border: none;
             width: 110px;
+
             .form-control:hover {
                 color: $color-blanco;
             }
@@ -170,35 +171,6 @@ h1 {
 
 /*productos*/
 
-.ful-img{
-    width: 100%;
-    height: 100vh;
-background-color: rgba(0, 0, 0, 0.9);
-position: fixed;
-top: 0;
-left: 0;
-display: none;
-align-items: center;
-justify-content: center;
-z-index: 99;
-}
-
-.ful-img span{
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.ful-img img{
-    width: 40%;
-    max-width: 400px;
-}
-
-
-
 
 .productos {
     @include tamanio(100%, 100%);
@@ -236,6 +208,34 @@ z-index: 99;
     }
 }
 
+.ful-img {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.ful-img span {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ful-img img {
+    width: 40%;
+    max-width: 400px;
+}
+
+
 
 .form-control {
     border-radius: 5px;
@@ -253,11 +253,11 @@ z-index: 99;
     box-shadow: 5px 5px 15px;
 }
 
-.categorias{
+.categorias {
     position: relative;
 }
 
-.icono{
+.icono {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -527,13 +527,13 @@ ul {
     background-color: #ffcfd2;
 }
 
-.btn-primary{
+.btn-primary {
     @extend.boton;
- padding: 10px 10px;
-   border: none;
-   background-color: #6e4555;
-   color: #ffcfd2;
- 
+    padding: 10px 10px;
+    border: none;
+    background-color: #6e4555;
+    color: #ffcfd2;
+
 }
 
 .boton-submit {
@@ -558,7 +558,7 @@ ul {
 }
 
 
-.bttn{
+.bttn {
     @extend.boton;
     width: 10%;
     height: 40px;
@@ -569,7 +569,7 @@ ul {
     }
 }
 
-.text{
+.text {
     text-align: right;
     font-weight: bold;
     color: #6e4555;

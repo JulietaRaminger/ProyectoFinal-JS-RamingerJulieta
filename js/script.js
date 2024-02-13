@@ -9,6 +9,7 @@ const btnBuy = document.querySelector("#btnBuy");
 const btnClose = document.querySelector("#btnClose");
 const selectCategory = document.querySelector("#selectCategory");
 
+
 const listCart = JSON.parse(localStorage.getItem("cart")) || [];
 const cart = new Cart(listCart);
 

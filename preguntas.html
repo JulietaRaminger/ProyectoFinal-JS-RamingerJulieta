@@ -22,7 +22,6 @@
   <!--link de css-->
   <link rel="stylesheet" href="./css/style.css" />
   <!--JavaScript-->
-  <script src="./js/data.js" defer></script>
   <script src="./js/carrito.js" defer></script>
   <script src="./js/script.js" defer></script>
   <!--Librerias de JS-->
@@ -60,7 +59,7 @@
         <button id="btnCarrito" type="button" class="btn-primary">
           <i class="bx bx-cart"></i>
           <span id="cartCount" class="badge text-bg-secondary">0</span>
-      </button>
+        </button>
       </li>
     </ul>
     <label for="check-menu">
@@ -117,6 +116,69 @@
   </section>
 
 
+  <!--Carrito de compras-->
+  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+    <input id="inputSearch" type="search" class="form-control" placeholder="Buscar...">
+  </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+    <div class="categorias">
+      <select id="selectCategory" class="form-control">
+
+      </select>
+      <i class='icono bx bxs-chevron-down-square'></i>
+    </div>
+  </div>
+
+  <!--Clic a mis imagenes para que se agranden-->
+  <div class="ful-img" id="fulImgBox">
+    <img id="fulImg" alt="">
+    <span><i class='bx bx-x' id="closeImg"></i></span>
+  </div>
+
+  <div class="container productos">
+    <div id="listProducts" class="row">
+    </div>
+  </div>
+  </main>
+
+  <div id="modalCarrito" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fa-solid fa-cart-shopping"></i> Carrito </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+
+            <tbody id="modalListProducts">
+
+            </tbody>
+
+          </table>
+
+          <p class="text"> Total $ <span id="cartSum"></span></p>
+        </div>
+
+        <div class="modal-footer">
+          <button id="btnBuy" type="submit" class="bottn btn-primary">Comprar</button>
+          <button id="btnClose" type="button" class="bottn btn-primary">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!--Empieza footer-->
   <footer class="footer">
     <div class="container-fluid">
@@ -162,11 +224,10 @@
     </div>
   </section>
 
+
   <!--bootstrap js-->
   <script src="./js/bootstrap.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 
   <script>

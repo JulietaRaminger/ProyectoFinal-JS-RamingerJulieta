@@ -1,18 +1,18 @@
-const fulImgBox = document.getElementById('fulImgBox');
-const fulImg = document.getElementById('fulImg');
+const fulImgBox = document.querySelector('#fulImgBox');
+const fulImg = document.querySelector('#fulImg');
 
-function openFulImg(reference) {
+
+const openFulImg = (reference) => {
   fulImg.src = reference;
   fulImgBox.style.display = "flex";
-}
+};
 
-function closeImg() {
+const closeImg = () => {
   fulImgBox.style.display = 'none';
-}
+};
 
-fulImg.addEventListener('click', closeImg); // Cerrar la imagen si se hace clic en ella
-document.getElementById('closeImg').addEventListener('click', closeImg);
-
+fulImg.addEventListener('click', closeImg); 
+document.querySelector('#closeImg').addEventListener('click', closeImg);
 
 
 
