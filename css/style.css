@@ -660,6 +660,9 @@ ul .link_item a i.bx {
     height: 30px;
     margin: 0 20%;
   }
+  .ful-img img {
+    width: 50%;
+  }
   /*sobre nosotros*/
   .taller {
     padding: 0% 10%;
@@ -751,6 +754,9 @@ ul .link_item a i.bx {
   .form-control {
     margin-bottom: 10%;
   }
+  .ful-img img {
+    width: 60%;
+  }
   /*comienza sobre nosotros*/
   div#carousel.carousel-inner {
     max-height: 700px;
@@ -809,6 +815,9 @@ ul .link_item a i.bx {
   }
   .form-control {
     margin-bottom: 10%;
+  }
+  .ful-img img {
+    width: 80%;
   }
   /*comienza sobre nosotros*/
   div#carousel.carousel-inner {
