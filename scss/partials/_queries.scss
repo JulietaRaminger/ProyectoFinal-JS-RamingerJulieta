@@ -147,6 +147,11 @@
     text-align: justify;
     padding: 5px 50px;
   }
+
+  .bttn {
+    width: 15%;
+  }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -229,6 +234,11 @@
       }
     }
   }
+
+  .bttn {
+    width: 20%;
+  }
+
 }
 
 @media screen and (max-width: 400px) {
@@ -339,4 +349,9 @@
     text-align: center;
     padding: 0;
   }
-}
+
+  .bttn {
+    width: 20%;
+  }
+ 
+  }
